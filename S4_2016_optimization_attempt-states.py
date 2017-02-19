@@ -1,14 +1,25 @@
-# notused = raw_input()
-# text_input = raw_input() 
-text_input = "9 23725 352488 23725 32514 67543 67543 32514 399938 999989"
+'''
+This optimization attempt essentially
+appends current state of list to an array so that if it has already been done does not get attempted again. 
+so list states[] is a two-dimensional array that is checked each time. 
+'''
+
+notused = raw_input()
+text_input = raw_input() 
+# text_input = "9 23725 352488 23725 32514 67543 67543 32514 399938 999989"
 r = map(int, text_input.split(' '))
 # man map function is really useful didnt know
-import copy 
+import copy
 #deep copying is neccesarry for this really terrible solution I have come up with. 
 #It's a work-around around a work-around. Please don't do this in your actual code.
 m = []
+states = []
 m.append(max(r))
 def stepstepstep(a):
+	if a in states:
+		return
+	states.append(a)
+	# print states
 	# print "begining, one step in!"
 	# print a
 	d = []
@@ -23,6 +34,8 @@ def stepstepstep(a):
 	for i in range(len(a)-2):
 		if a[i]==a[i+2]:
 			s.append(i)
+
+	#does the operations. 
 	if d==[] and s==[]:
 		m.append(max(a))
 		return
