@@ -1,6 +1,6 @@
 # notused = raw_input()
 # text_input = raw_input() 
-text_input = "50 55 10440 5220 5220 3186 4375 3186 20880 52507 34095 7184 45323 45323 7184 1990 17896 995 293 409 293 4448 4448 7511 911 911 911 911 402 402 209 386 209 1822 911 911 53 53 5505 106 71893 1301 753 1609 753 1301 25303 5469 5469 10938 31"
+text_input = "9 23725 352488 23725 32514 67543 67543 32514 399938 999989"
 r = map(int, text_input.split(' '))
 # man map function is really useful didnt know
 import copy 
@@ -26,7 +26,6 @@ def stepstepstep(a):
 	# print "d= " + str(d)
 	# print "s= " + str(s)
 	if d==[] and s==[]:
-		# print "exiting hahAA"
 		m.append(max(a))
 		return
 	else:
