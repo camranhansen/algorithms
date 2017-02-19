@@ -1,6 +1,6 @@
 # notused = raw_input()
 # text_input = raw_input() 
-text_input = "9 23725 352488 23725 32514 67543 67543 32514 399938 999989"
+text_input = "1 1 1 1 1 1 1 1 1 1 1 1"
 r = map(int, text_input.split(' '))
 # man map function is really useful didnt know
 import copy 

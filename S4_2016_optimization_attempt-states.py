@@ -2,11 +2,13 @@
 This optimization attempt essentially
 appends current state of list to an array so that if it has already been done does not get attempted again. 
 so list states[] is a two-dimensional array that is checked each time. 
+
+edit: so it actually turns out that this "optimization" increases runtime in edge cases (such as 1 1 1 1 1 1 1). I am not sure why. 
 '''
 
-notused = raw_input()
-text_input = raw_input() 
-# text_input = "9 23725 352488 23725 32514 67543 67543 32514 399938 999989"
+# notused = raw_input()
+# text_input = raw_input() 
+text_input = "1 1 1 1 1 1 1 1 1 1 1 1"
 r = map(int, text_input.split(' '))
 # man map function is really useful didnt know
 import copy
@@ -16,7 +18,7 @@ m = []
 states = []
 m.append(max(r))
 def stepstepstep(a):
-	if a in states:
+	if a in states or a.reverse() in states:
 		return
 	states.append(a)
 	# print states
