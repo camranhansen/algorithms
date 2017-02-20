@@ -1,3 +1,4 @@
+
 # notused = raw_input()
 # text_input = raw_input() 
 text_input = "1 1 1 1 1 1 1 1 1 1 1 1"
