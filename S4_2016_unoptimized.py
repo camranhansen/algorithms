@@ -1,4 +1,3 @@
-
 # notused = raw_input()
 # text_input = raw_input() 
 text_input = "1 1 1 1 1 1 1 1 1 1 1 1"
@@ -14,7 +13,6 @@ def stepstepstep(a):
 	# print a
 	d = []
 	s = []
-
 	#naive way of finding all possible matches. Finds indexes, appends them to arrays (d = double, s=sandwich)
 	#This is naive because it could be done in one loop. 
 	#However, i have chosen to do it this way because overall this code is severely unoptimised.
