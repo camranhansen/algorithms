@@ -40,7 +40,7 @@ def dothething(l1, l2):
 	print "====="
 	c = ""
 	return
-fin = open("DATA21.txt", "r")
+fin = open("data/DATA21.txt", "r")
 for i in range(10):
 	l1 =  int(fin.readline().rstrip())
 	l2 = fin.readline().rstrip().split(" ")
