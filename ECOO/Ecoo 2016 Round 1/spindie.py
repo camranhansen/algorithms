@@ -4,17 +4,31 @@ Start time:
 03:46 AM
 End time:
 04:16 PM
+
 essentially I go through every possible die roll and try to see if it works.
 I probably will use the eval function? maybe. il see what happens
 I think I remember doing this from last year.
 but man this solution takes way too long.
 il try and optimize this solution tommorow morning.
+I mean it works
+but like 
+it's not effecient whatsoever.
+wait, I just checked the input file. there are 5000 numbers on the spinner. LMAo
+hmm I guess one solution
+is to remove duplicates from b
+i'l try that I guess.
+Ther leaning point from this is to READ the input specifications.
+But in hindsight this is an abomination of a code.
+version 2 lets go
+Hmm not much of an improvement.
+
 '''
 fi = open("DATA/DATA21.txt")
 for i in range(10):
 	a = int(fi.readline())
 	b = fi.readline().split(" ")
 	b = map(int, b)
+	set(b)
 	c = fi.readline().split(" ")
 	c[-1] = c[-1][0:len(c)-2]
 	c = map(int, c)
@@ -35,7 +49,6 @@ for i in range(10):
 			print "F",
 		else:
 			print z,
-
 	print "\n"
 fi.close()
 
