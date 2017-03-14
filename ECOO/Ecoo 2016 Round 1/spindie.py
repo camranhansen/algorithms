@@ -21,19 +21,24 @@ Ther leaning point from this is to READ the input specifications.
 But in hindsight this is an abomination of a code.
 version 2 lets go
 Hmm not much of an improvement.
-
+OH wow. I realize I was not effectively using the set() method. 
+TIL that set(b) does not actually change b
+but now I have another problem - the last index is always "T". Why is this so?
+Im going to try and solve it in the morning.
 '''
 fi = open("DATA/DATA21.txt")
 for i in range(10):
 	a = int(fi.readline())
 	b = fi.readline().split(" ")
 	b = map(int, b)
-	set(b)
+	b = list(set(b))
+	# print b
 	c = fi.readline().split(" ")
 	c[-1] = c[-1][0:len(c)-2]
 	c = map(int, c)
 	r = [""]*len(c)
 	for j in b:
+		# print r
 		for k in b:
 			for l in b:
 				if ((j+k)+l) in c:
@@ -44,13 +49,25 @@ for i in range(10):
 					r[c.index((j*k)*l)] = "T"
 				if ((j+k)*l) in c:
 					r[c.index((j+k)*l)] = "T"
-	for z in r:
-		if z != "T":
-			print "F",
-		else:
-			print z,
-	print "\n"
+	# for z in r:
+	# 	if z != "T":
+	# 		print "F",
+	# 	else:
+	# 		print z,
+	# print "\n"
+	print r
 fi.close()
 
-
-
+'''
+solutions:
+TTTTF
+FFTTT
+TFTTF
+FTFFF
+TTTTT
+FFFFT
+TTFFF
+FFFTT
+FTFTT
+TFTFF
+'''
