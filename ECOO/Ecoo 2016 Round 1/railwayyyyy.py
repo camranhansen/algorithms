@@ -34,13 +34,12 @@ also requires no moving of either 4 or 5
 So the takeway from this is that
 I should test other cases than the test case.
 Especially strange cases (already sorted for example)
-
+Before zealously testing. Since during the competition that will lose us marks.
 '''
 import copy
 fi = open("DATA/DATA31.txt")
 for i in range(10):
-	a = int(fi.readline())
-	b = fi.readline().split(" ")
+	a,b = int(fi.readline()), fi.readline().split(" ")
 	del b[-1]
 	b = map(int, b)
 	if sorted(b) == b:
