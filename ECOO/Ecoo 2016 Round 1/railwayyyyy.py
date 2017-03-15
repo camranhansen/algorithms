@@ -36,7 +36,6 @@ I should test other cases than the test case.
 Especially strange cases (already sorted for example)
 Before zealously testing. Since during the competition that will lose us marks.
 '''
-import copy
 fi = open("DATA/DATA31.txt")
 for i in range(10):
 	a,b = int(fi.readline()), fi.readline().split(" ")
