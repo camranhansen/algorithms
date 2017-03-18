@@ -14,7 +14,6 @@ def fa(x,y,r):
 	#yes, I know that I do not have to go through this so many times. However, I do not really care much for the effeciency of my solution.. hopefuly?
 	#im going to code a better solution tommorow morning. but right now (3-4AM), not really.
 	lns.sort()
-	# print lns
 	af = [] #the ARRAY of affiliations
 	for b in r:
 		if pythag(x,y,b[0],b[1]) == lns[0] or pythag(x,y,b[0],b[1]) == lns[1] or pythag(x,y,b[0],b[1]) == lns[2]:
@@ -42,7 +41,7 @@ def dothething(z,r):
 			if pythag(xc,yc,0,0) <=50.0:
 				democrats += fa((xc+z[0]),(yc+z[1]),r)
 				total += 1.0
-	print (round((democrats/total),3))*100
+	print round((democrats/total), 4)*100 #not excactly sure why my numbers dont match the answers.. Strange..... I wonder why I am 0.1 percent off.
 fi = open("DATA/DATA41.txt")
 for i in range(10):
 	iz = fi.readline().split(" ")
