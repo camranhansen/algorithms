@@ -6,7 +6,7 @@ My circle generation function was generating a square. So, takeway: make sure th
 '''
 def pythag(x1,y1,x2,y2):
 	return math.sqrt(((abs(x1-x2))**2)+((abs(y1-y2))**2))
-def fa(x,y):
+def fa(x,y,r):
 	lns = [100000]*3
 	for pexhs in r:
 		if pythag(x,y,pexhs[0],pexhs[1])<max(lns):
@@ -23,16 +23,7 @@ def fa(x,y):
 		return 1.0
 	else:
 		return 0.0
-fi = open("DATA/DATA40.txt")
-for i in range(1):
-	z = fi.readline().split(" ")
-	xr = fi.readlines() #make sure that the input actualy works before testing it with an actual test case.
-	r = []
-	count = 0
-	for line in xr:
-		if count <100:
-			r.append(line)
-		count += 1
+def dothething(z,r):
 	for g in r:
 		h = r.index(g)
 		r[h] = g.split(" ") 
@@ -44,13 +35,19 @@ for i in range(1):
 	#strip newlines
 	z[1] = z[1][0:len(z[1])-2]
 	z = map(int,z)
-	# print z
 	democrats = 0.0
 	total = 0.0
 	for xc in range(-50,51,1):
 		for yc in range(-50,51,1):
 			if pythag(xc,yc,0,0) <=50.0:
-				democrats += fa((xc+z[0]),(yc+z[1]))
+				democrats += fa((xc+z[0]),(yc+z[1]),r)
 				total += 1.0
 	print (round((democrats/total),3))*100
+fi = open("DATA/DATA41.txt")
+for i in range(10):
+	iz = fi.readline().split(" ")
+	ir = []
+	for i in range(100):
+		ir.append(fi.readline())
+	dothething(iz,ir)
 fi.close()
