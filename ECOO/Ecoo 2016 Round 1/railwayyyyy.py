@@ -41,7 +41,7 @@ for i in range(10):
 	a,b = int(fi.readline()), fi.readline().split(" ")
 	del b[-1]
 	b = map(int, b)
-	if sorted(b) == b:
+	if sorted(b) == b:	
 		print 0
 		continue
 	z,c,t,k = 0,1,0,True
