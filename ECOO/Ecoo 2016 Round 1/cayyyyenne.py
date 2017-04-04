@@ -25,7 +25,6 @@ def fa(x,y,r):
 		return [1.0,1.0]
 	else:
 		return [0.0,1.0]
-
 def dothething(z,r):
 	for g in r:
 		h = r.index(g)
