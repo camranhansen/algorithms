@@ -24,9 +24,9 @@ def dothething(l1, l2):
 					c = ""
 				c += x
 		else:
-			# print "fuck"
+
 			if len(c) + len(z) + 1 > l1:
-				# print "fuck"
+
 				print c
 				c = ""
 			# print "yes"
