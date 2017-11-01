@@ -4,6 +4,7 @@ l2 = "1 10 100 1000 2000"
 # l2 = raw_input()
 #rainbow method
 #like I know that you are supposed to do it using recursion i just dont know how.
+#this is just a test comment to see if github is owkring (change later)
 # l1 = int(raw_input())
 # l2 = raw_input()
 l = l2.split(" ")
